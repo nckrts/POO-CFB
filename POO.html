@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POO</title>
+    <script>
+        class Car
+        {
+            constructor(TpFuel)
+            {
+                this.totalFuel=100
+                this.on=false
+                this.typeFuel=TpFuel
+            }
+            info(){
+                console.log("Total Fuel..:" + this.totalFuel)
+                console.log("Motor On?...:" + (this.on ? "Yes": "No"))
+                console.log("Type Car...:" + this.typeFuel)
+                console.log("--------------------------")
+            }
+            turnsOn(){
+                this.switchedOn=true
+            }
+            turnsOff(){
+                this.switchedOn=false
+            }
+
+            set setFuel(v)
+            {
+                if(v<0 || v>100){
+                    alert("Valor inválido")
+                }else{
+                    this.totalFuel=v
+                    console.log("Combustivel alterado para: " + this.totalFuel)
+                }
+            }
+
+            get getComb()
+            {
+                return this.totalFuel
+            }
+
+
+            // turnsOnturnsOff(ld){
+            //     this.switchedOn=ld
+            // }
+
+        }
+
+        let car1=new Car("Audi","TT","Silver")
+        let car2=new Car("chevrolet","Camaro","Yellow")
+        let car3=new Car("Mazda","RX-7","Blue")
+        let car4=new Car("Nissan","Silvia S15","Black")
+
+        car1.setFuel=50
+
+        car1.info()
+       // car2.info()
+       // car3.info()
+        // car4.info()
+
+    </script>
+</head>
+    <body>
+
+    </body>
+</html>
